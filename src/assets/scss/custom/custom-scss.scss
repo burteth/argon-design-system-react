@@ -1,0 +1,66 @@
+.projectCardContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    justify-content: space-evenly;
+}
+
+.projectCard{
+    // background-color: red;    
+    // border: 1px solid green;
+    // margin: 2em;
+    display: flex;
+    flex-direction: column;    
+
+    height: 15rem;    
+
+    // width: 19rem;
+}
+
+.projectImageContainer{
+    // background-color: purple;
+    // border: 1px solid yellow;
+    position: relative;
+    height: 80%;
+    width: 100%;   
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.8s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.projectImage{
+    position: absolute;
+    width: 100%;
+    top:0px;    
+    right:0px;
+    bottom:0px;
+    left:0px;
+    // display: none;
+    z-index: 1;
+    transition-duration: 0.8s;    
+}
+.projectDesc{
+    display: none;
+    color:gray;
+    z-index: 1;
+    font-size: 10;
+}
+.projectName{
+    color: black;
+
+}
+.projectImageContainer:hover {
+    
+    .projectImage{
+        filter: blur(14px);
+        -webkit-filter: blur(14px);
+        opacity: 0.2;
+        z-index: 0;
+    }
+    
+    .projectDesc{
+        display: inline;
+    }
+}
